@@ -1,0 +1,52 @@
+@import "~bourbon";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
+
+#courses {
+	@include background(#F2F2F2);
+	overflow-x: hidden;
+
+	.height-90 {
+		height: 93%;
+	}
+
+	.img-responsive {
+		max-width: 80%;
+	}
+
+	#right_column {
+		@media screen and (min-width: $screen-md-min) {
+			width: 45%;
+		}
+	}
+
+	#accordion {
+		a {
+			text-decoration: none;
+			display: block;
+			user-select: none;
+		}
+
+		.panel-heading {
+			@include background(shade(#606060, 10%));
+		}
+
+		.title {
+			font-size: 150% !important;
+			font-weight: 300 !important;
+			color: white;
+
+			@media screen and (max-width: $screen-sm-max) {
+				font-size: 300% !important;
+			}
+		}
+
+		.item {
+			font-size: 130% !important;
+			font-weight: 200 !important;
+
+			@media screen and (max-width: $screen-sm-max) {
+				font-size: 250% !important;
+			}
+		}
+	}
+}

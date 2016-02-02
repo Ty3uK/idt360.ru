@@ -1,0 +1,70 @@
+#slide_1, #slide_2, #slide_3, #slide_4 {
+	height: 90%;
+
+	.mobileSize {
+		@media (min-device-width: 320px) and (max-device-width: 768px) and (orientation: portrait) {
+			font-size: 500% !important;
+		}
+
+		@media (min-device-width: 480px) and (max-device-width: 768px) and (orientation: landscape) {
+			font-size: 230% !important;
+		}
+	}
+
+	a.button.grey {
+		text-decoration: none;
+		color: #5F5F5F;
+		border: 1px #8D8D8D solid;
+		font-weight: 100;
+		font-size: 180%;
+		padding: 10px 20px;
+		display: inline-block;
+		border-radius: 30px;
+
+		@media (min-device-width: 320px) and (max-device-width: 768px) and (orientation: portrait) {
+			font-size: 400% !important;
+			padding: 10px 40px !important;
+			border-radius: 60px !important;
+		}
+
+		@media (min-device-width: 320px) and (max-device-width: 768px) and (orientation: landscape) {
+			font-size: 200% !important;
+			padding: 5px 40px !important;
+			border-radius: 60px !important;
+		}
+	}
+
+	a.button.grey:hover {
+		background-color: #E8E8E8;
+	}
+
+	.img-responsive {
+		margin: 0 auto;
+
+		@media (max-device-width: 480px) and (orientation: landscape) {
+			max-width: 50% !important;
+		}
+
+		@media (min-width: 480px) and (max-width: 992px) and (orientation: landscape) {
+			max-width: 45% !important;
+		}
+	}
+
+	#ipadImg {
+		max-width: 70%;
+
+		@media (min-width: 480px) and (max-width: 992px) and (orientation: landscape) {
+			max-width: 40% !important;
+		}
+	}
+
+	.title {
+		font-size: 250%;
+		font-weight: 100;
+		display: block;
+	}
+
+	.title.primary {
+		font-weight: 300 !important;
+	}
+}

@@ -1,0 +1,28 @@
+{
+  "name": "webpack-react-coffee",
+  "version": "0.0.1",
+  "main": "app/index.cjsx",
+  "moduleType": [
+    "node"
+  ],
+  "authors": [
+    "Maksim Karelov <max.karelov@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "~3.2.6",
+    "hint.css": "~1.3.5",
+    "bourbon": "~4.2.3"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "font-source-sans-pro": "~0.1.0"
+  }
+}

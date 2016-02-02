@@ -1,0 +1,33 @@
+@import "~bourbon";
+
+html, body {
+	@include size(100%);
+}
+
+#index {
+	@include background(#F2F2F2);
+	overflow: hidden;
+
+	.container-fluid {
+		@include padding(0);
+	}
+
+	.slider-container {
+		@include position(absolute, null null 0 null);
+	}
+
+	.slider {
+		.slide {
+			@include size(10px);
+			@include background(#5A5A5A);
+			@include margin(5px);
+			border-color: #5A5A5A;
+		}
+
+		.slide.active {
+			@include margin(1px null 5px null);
+			@include background(#D2D2D2);
+			cursor: default;
+		}
+	}
+}

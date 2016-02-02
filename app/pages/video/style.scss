@@ -1,0 +1,10 @@
+@import "~bourbon";
+
+#video {
+	overflow: hidden;
+	@include background(#F2F2F2);
+
+	.fullHeight {
+		height: 93% !important;
+	}
+}

@@ -1,0 +1,26 @@
+@import "~bourbon";
+
+#header {
+	@include background(#606060);
+
+	.headerItem {
+		font-size: 2rem;
+		font-weight: 200;
+		display: inline-block;
+		@include margin(10px auto);
+	}
+
+	.active {
+		@include background(tint(#606060, 10%));
+	}
+
+	.mobileSize {
+		@media (min-device-width: 320px) and (max-device-width: 768px) and (orientation: portrait) {
+			font-size: 350% !important;
+		}
+	}
+
+	.row {
+		@include margin(0);
+	}
+}

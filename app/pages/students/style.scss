@@ -1,0 +1,43 @@
+@import "~bourbon";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
+
+#students {
+	@include background(#F2F2F2);
+	@include padding(0);
+	overflow: hidden;
+
+	.height-90 {
+		height: 93%;
+	}
+
+	.img-responsive {
+		max-width: 80%;
+	}
+
+	.title {
+		display: block;
+		font-size: 200%;
+		font-weight: 100;
+
+		@media screen and (max-width: $screen-sm-max) and (orientation: portrait) {
+			font-size: 300%;
+		}
+	}
+
+	.title.primary {
+		font-weight: 300 !important;
+	}
+
+	.title.sub {
+		font-size: 150%;
+		@include padding(null 5% null 5%);
+
+		@media screen and (max-width: $screen-sm-max) and (orientation: portrait) {
+			font-size: 250%;
+		}
+
+		&.padding {
+			@include padding(2% 5% null 5%);
+		}
+	}
+}

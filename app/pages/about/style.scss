@@ -1,0 +1,121 @@
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "~bourbon";
+
+#contacts {
+	@include background(#F2F2F2);
+	overflow-x: hidden;
+
+	.noPadding {
+		@include padding(0);
+	}
+
+	.title {
+		display: block;
+		font-size: 200%;
+		font-weight: 100;
+
+		@media screen and (max-width: $screen-sm-max) and (orientation: portrait) {
+			font-size: 300%;
+		}
+	}
+
+	.title.primary {
+		font-weight: 300 !important;
+	}
+
+	.title.sub {
+		font-size: 150%;
+
+		@media screen and (max-width: $screen-sm-max) and (orientation: portrait) {
+			font-size: 250%;
+		}
+	}
+
+	.title.big {
+		font-size: 300% !important;
+
+		@media screen and (max-width: $screen-sm-max) and (orientation: portrait) {
+			font-size: 400%;
+		}
+	}
+
+	.photo {
+		@include margin(0 auto);
+		max-width: 40%;
+
+		@media screen and (max-width: $screen-md-max) {
+			max-width: 30%;
+		}
+	}
+
+	.photo-3rd {
+		@include margin(0 auto);
+		max-width: 30%;
+	}
+
+	.valign-landscape {
+		@media screen and (min-width: $screen-lg-min) and (orientation: landscape) {
+			@include position(relative, 50% null null null);
+			@include transform(translateY(-50%));
+		}
+	}
+
+	.mobileSize {
+		@media (max-width: $screen-md) and (orientation: landscape) {
+			font-size: 250% !important;
+		}
+
+		@media (max-width: $screen-xs) and (orientation: portrait) {
+			font-size: 400% !important;
+		}
+	}
+
+	.rotate-container {
+		@include perspective(100%);
+	}
+
+	.contact-front, .contact-back {
+		@include backface-visibility(hidden);
+		@include transition(0.8s);
+	}
+
+	.contact-front {
+	}
+
+	.contact-back {
+		@include position(absolute, 0 null null null);
+		@include size(90%);
+		@include transform(rotateY(180deg));
+
+		.valign {
+			@include position(null, 50% null null 50%);
+			//@include size(85%);
+			@include transform(translate(-50%, -50%));
+			@include padding(5px);
+			@include background(#FFF);
+			box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+			color: #272727;
+			border-radius: 2px;
+		}
+	}
+
+	.rotate-container:hover .contact-back {
+		@include transform(rotateY(360deg));
+	}
+
+	.rotate-container:hover .contact-front {
+		@include transform(rotateY(180deg));
+	}
+
+	.skills {
+		font-weight: 300;
+		display: block;
+		font-size: 150%;
+		width: 100%;
+
+		&.sub {
+			font-size: 130%;
+			font-weight: 100 !important;
+		}
+	}
+}
