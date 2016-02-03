@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack/dev.config.js",
     "build": "NODE_ENV=production webpack --config webpack/production.config.js && cp app/index.html dist/ && cp -R app/assets dist/",
-    "deploy": "rsync -rvz dist/ root@idt360.ru:/var/www/idt360.ru && ssh root@idt360.ru 'service nginx restart'"
+    "deploy": "rsync -rvz dist/ root@idt360.ru:/var/www/idt360.ru && ssh root@idt360.ru 'service nginx restart'",
+    "test": "NODE_ENV=production webpack --config webpack/production.config.js"
   },
   "author": "Maksim Karelov <max.karelov@gmail.com>",
   "license": "ISC",
@@ -15,19 +16,21 @@
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
     "css-loader": "^0.23.1",
     "css-mqpacker": "^4.0.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "jsx-loader": "^0.13.2",
+    "node-sass": "^3.4.2",
     "postcss-loader": "^0.8.0",
     "react-hot-loader": "^1.3.0",
     "sass-loader": "^3.1.2",
-    "style-loader": "^0.13.0"
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.12"
   },
   "dependencies": {
-    "babel-preset-react": "^6.3.13",
     "hammerjs": "^2.0.4",
     "mobile-detect": "^1.2.0",
     "react": "^0.14.7",
