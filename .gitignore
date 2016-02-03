@@ -1,5 +1,6 @@
 .idea
 .DS_Store
-node_moules/
-bower_components/\
+node_modules
+bower_components
+dist
 npm-debug.log

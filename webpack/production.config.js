@@ -35,7 +35,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.NoErrorsPlugin(),
         new extractTextWebpackPlugin('bundle.css'),
         new webpack.ProvidePlugin({
             $: "jquery",
