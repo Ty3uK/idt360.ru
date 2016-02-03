@@ -1,6 +1,9 @@
 language: node_js
 node_js: "5.5"
 
+before_install:
+  - "npm i -g bower"
+
 install:
   - "npm i"
   - "bower i"
